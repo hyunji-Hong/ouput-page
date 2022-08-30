@@ -17,10 +17,10 @@
 ## => Site Settings
 ##############################
 text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
-highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
-url     : # the base hostname & protocol for your site e.g. https://www.someone.com
+highlight_theme: tomorrow-night-eighties # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
+url     : https://hyunji-hong.github.io # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : # does not include hostname
-title   : Your Site Title
+title   : Routine
 description: > # this means to ignore newlines until "Language & timezone"
   Your Site Description
 
@@ -35,11 +35,11 @@ timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for
 ##############################
 author:
   type      : # "person" (default), "organization"
-  name      : Your Name
-  url       :
+  name      : hyunji-Hong
+  url       : https://hyunji-hong.github.io
   avatar    : # path or url of avatar image (square)
-  bio       : I am an amazing person.
-  email     :
+  bio       : I am a person.
+  email     : hyunji_hong@korea.ac.kr
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
   twitter   : # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
   weibo     : # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
@@ -48,14 +48,14 @@ author:
   medium    : # "user_name" the last part of your profile url, e.g. https://medium.com/user_name
   zhihu     : # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
   douban    : # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name
-  linkedin  : # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
-  github    : # "user_name" the last part of your profile url, e.g. https://github.com/user_name
+  linkedin  : https://www.linkedin.com/in/hyunji-hong-35a9a3199/ # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
+  github    : https://github.com/hyunji-Hong # "user_name" the last part of your profile url, e.g. https://github.com/hyunji-Hong
   npm       : # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
 
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: user_name/repo_name
+repository: hyunji-Hong/output-page
 repository_tree: master
 
 
@@ -71,7 +71,7 @@ paths:
 ## => Post
 ##############################
 ## excerpt
-excerpt_separator: <!--more-->
+excerpt_separator: \n\n #<!--more-->
 
 ## license
 license: CC-BY-NC-4.0 # "CC-BY-4.0", "CC-BY-SA-4.0", "CC-BY-NC-4.0", "CC-BY-ND-4.0"
@@ -118,11 +118,11 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: false # false (default), "disqus", "gitalk", "valine", "custom"
+  provider: disqus #false # false (default), "disqus", "gitalk", "valine", "custom"
 
   ## Disqus
   disqus:
-    shortname: # the Disqus shortname for the site
+    shortname: hyunji # the Disqus shortname for the site
 
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
@@ -214,7 +214,16 @@ defaults:
       show_edit_on_github: true
       show_subscribe: true
       pageview: true
-
+      key: anything # 반드시 이 구문을 넣어야 disqus 댓글이 각 post 마다 실행됨
+      mode: immersive # 백그라운드 이미지 위에 헤더와 타이틀 올리기
+      header:
+        theme: dark # dark는 헤더의 배경을 어둡게 하고 글씨를 밝게함. light는 반대
+      article_header:
+        type: overlay # 포스트 내부에서 헤더 오버레이 적용여부
+        theme: dark
+        background_image: # 포스트 헤더 배경이미지 경로 및 그라데이션 설정
+          src: https://cdn.dribbble.com/users/463836/screenshots/1876492/attachments/344600/Mountain__2560x1440x.jpg
+          gradient: 'linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .0))'
 
 ## => Plugins
 ##############################
